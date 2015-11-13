@@ -19,6 +19,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-kw-sYC">
                                 <rect key="frame" x="157" y="166" width="120" height="120"/>
                                 <state key="normal" title="Kick"/>
+                                <connections>
+                                    <action selector="playKick:" destination="BYZ-38-t0r" eventType="touchDown" id="fGK-Na-9a8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
