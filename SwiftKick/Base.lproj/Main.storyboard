@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,15 +17,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-kw-sYC">
-                                <rect key="frame" x="157" y="166" width="120" height="120"/>
-                                <state key="normal" title="Kick"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-kw-sYC">
+                                <rect key="frame" x="20" y="28" width="262" height="244"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Kick">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
                                 <connections>
                                     <action selector="playKick:" destination="BYZ-38-t0r" eventType="touchDown" id="fGK-Na-9a8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZ5-FK-OTw">
+                                <rect key="frame" x="318" y="28" width="262" height="245"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Snare">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSnare:" destination="BYZ-38-t0r" eventType="touchDown" id="jwO-dh-0kO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKL-o5-TNR">
+                                <rect key="frame" x="20" y="331" width="262" height="244"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Clap">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="playClap:" destination="BYZ-38-t0r" eventType="touchDown" id="9mc-2c-Ji2"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-bT-Qf8">
+                                <rect key="frame" x="280" y="280" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="GiM-ZN-jTi"/>
+                                    <constraint firstAttribute="height" constant="40" id="Vff-0I-4Uq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8e-YA-gI5">
+                                <rect key="frame" x="290" y="28" width="20" height="244"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="me5-bz-gM6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03J-zI-QLs">
+                                <rect key="frame" x="290" y="328" width="20" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="0ea-ui-nWl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kJ-jR-jhp">
+                                <rect key="frame" x="318" y="328" width="262" height="247"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="HiHat">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="playHihat:" destination="BYZ-38-t0r" eventType="touchDown" id="XPR-qo-XeO"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lZ5-FK-OTw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="1oG-T1-0VA"/>
+                            <constraint firstItem="YUa-bT-Qf8" firstAttribute="top" secondItem="lZ5-FK-OTw" secondAttribute="bottom" constant="7" id="5KI-T3-v3w"/>
+                            <constraint firstItem="YUa-bT-Qf8" firstAttribute="top" secondItem="O8e-YA-gI5" secondAttribute="bottom" constant="8" id="6Xa-7X-Smx"/>
+                            <constraint firstItem="S8U-kw-sYC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="7iD-vt-I7K"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="S8U-kw-sYC" secondAttribute="leading" id="E3m-bF-uCf"/>
+                            <constraint firstItem="03J-zI-QLs" firstAttribute="leading" secondItem="kKL-o5-TNR" secondAttribute="trailing" constant="8" id="G7k-nd-7Nx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8kJ-jR-jhp" secondAttribute="bottom" constant="25" id="HlZ-SJ-7d0"/>
+                            <constraint firstItem="kKL-o5-TNR" firstAttribute="top" secondItem="YUa-bT-Qf8" secondAttribute="bottom" constant="11" id="IMb-Zs-sLd"/>
+                            <constraint firstItem="8kJ-jR-jhp" firstAttribute="leading" secondItem="03J-zI-QLs" secondAttribute="trailing" constant="8" id="Ibt-Sq-Hjv"/>
+                            <constraint firstItem="YUa-bT-Qf8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KT6-ec-ghO"/>
+                            <constraint firstItem="O8e-YA-gI5" firstAttribute="leading" secondItem="S8U-kw-sYC" secondAttribute="trailing" constant="8" id="MDU-5g-hbm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lZ5-FK-OTw" secondAttribute="trailing" id="Wkp-Tm-luB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kKL-o5-TNR" secondAttribute="bottom" constant="25" id="WlT-12-n8T"/>
+                            <constraint firstItem="O8e-YA-gI5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="cHr-F3-W4e"/>
+                            <constraint firstItem="8kJ-jR-jhp" firstAttribute="top" secondItem="YUa-bT-Qf8" secondAttribute="bottom" constant="8" id="cc6-xS-OuO"/>
+                            <constraint firstItem="03J-zI-QLs" firstAttribute="top" secondItem="YUa-bT-Qf8" secondAttribute="bottom" constant="8" id="chj-nH-Gs5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="03J-zI-QLs" secondAttribute="bottom" constant="25" id="eow-Vj-FYp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kKL-o5-TNR" secondAttribute="leading" id="jJ6-Xt-Qkw"/>
+                            <constraint firstItem="YUa-bT-Qf8" firstAttribute="top" secondItem="S8U-kw-sYC" secondAttribute="bottom" constant="8" id="reP-Za-PI1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8kJ-jR-jhp" secondAttribute="trailing" id="seU-Ng-bE9"/>
+                            <constraint firstItem="O8e-YA-gI5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t8Z-Ec-C8d"/>
+                            <constraint firstItem="YUa-bT-Qf8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tKp-Jz-VKe"/>
+                            <constraint firstItem="lZ5-FK-OTw" firstAttribute="leading" secondItem="O8e-YA-gI5" secondAttribute="trailing" constant="8" id="us9-ma-jgM"/>
+                            <constraint firstItem="03J-zI-QLs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xhL-DE-hDq"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
